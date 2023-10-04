@@ -322,7 +322,7 @@ https://developer.mozilla.org/en-US/docs/Learn/Server-side/Django/Sessions
 https://pbp-fasilkom-ui.github.io/ganjil-2024/docs/tutorial-3
 ---
 
-TUGAS 4 PEMROGRAMAN BERBASIS PLATFORM
+TUGAS 5 PEMROGRAMAN BERBASIS PLATFORM
 ---
 Nama	: Sekar Gandes Dianti
 
@@ -335,7 +335,6 @@ Jelaskan manfaat dari setiap element selector dan kapan waktu yang tepat untuk m
 1. Selector Elemen
    - Manfaat:
    - Tepat digunakan untuk mengaplikasikan gaya atau operasi pada semua elemen dari satu jenis. 
-   
    Contoh:
    ```
    p {

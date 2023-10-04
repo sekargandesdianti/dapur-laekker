@@ -1,48 +1,43 @@
 {% extends 'base.html' %}
 
 {% block content %}
-    <h1>Dapur Laekker's Inventory</h1>
+<div class="container">
+    <h1 class="text-center mt-4">Inventory</h1>
+    <h6 class="mt-4">Name:</h5>
+    <p class="mt-1">{{name}}</p>
 
-    <h5>Name:</h5>
-    <p>{{name}}</p>
+    <h6 class="mt-4">Class:</h5>
+    <p class="mt-1">{{class}}</p>
 
-    <h5>Class:</h5>
-    <p>{{class}}</p>
+    <div class="card-deck">
+        {% for inventory in products %}
+            <div class="card border-secondary mt-4">
+                <div class="card-body">
+                    <h5 class="card-title">{{inventory.name}}</h5>
+                    <p class="card-text">Amount: {{inventory.amount}}</p>
+                    <p class="card-text">Description: {{inventory.description}}</p>
+                    <p class="card-text">Date Added: {{inventory.date_added}}</p>
+                    <a href="{% url 'main:edit_product' inventory.pk %}" class="btn btn-primary">
+                        Edit
+                    </a>
+                    <a href="{% url 'main:delete_product' inventory.pk %}" class="btn btn-danger">
+                        Delete
+                    </a>
+                </div>
+            </div>
+        {% endfor %}
+    </div>
 
-<table>
-    <tr>
-        <th>Name</th>
-        <th>Amount</th>
-        <th>Description</th>
-        <th>Date Added</th>
-    </tr>
+    <br />
 
-    {% comment %} Berikut cara memperlihatkan data produk di bawah baris ini {% endcomment %}
-
-    {% for inventory in products %}
-        <tr>
-            <td>{{inventory.name}}</td>
-            <td>{{inventory.amount}}</td>
-            <td>{{inventory.description}}</td>
-            <td>{{inventory.date_added}}</td>
-        </tr>
-    {% endfor %}
-</table>
-
-<br />
-
-<h5>Sesi terakhir login: {{ last_login }}</h5>
-
-<a href="{% url 'main:create_product' %}">
-    <button>
+    <a href="{% url 'main:create_product' %}" class="btn btn-primary">
         Add New Product
-    </button>
-</a>
+    </a>
 
-<a href="{% url 'main:logout' %}">
-    <button>
+    <h5 class="mt-3">Sesi terakhir login: {{ last_login }}</h5>
+
+    <a href="{% url 'main:logout' %}" class="btn btn-light mb-3" style="background-color: lightgrey">
         Logout
-    </button>
-</a>
-
+    </a>
+</div>
 {% endblock content %}

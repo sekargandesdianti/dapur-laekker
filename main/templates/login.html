@@ -5,41 +5,38 @@
 {% endblock meta %}
 
 {% block content %}
+<div class="container">
+    <div class="login-container">
+        <h1 class="text-center">Login</h1>
 
-<div class = "login">
+        <form method="POST" action="" class="login-form">
+            {% csrf_token %}
+            <div class="mb-3">
+                <label for="username" class="form-label">Username:</label>
+                <input type="text" name="username" placeholder="Username" class="form-control">
+            </div>
 
-    <h1>Login</h1>
+            <div class="mb-3">
+                <label for="password" class="form-label">Password:</label>
+                <input type="password" name="password" placeholder="Password" class="form-control">
+            </div>
 
-    <form method="POST" action="">
-        {% csrf_token %}
-        <table>
-            <tr>
-                <td>Username: </td>
-                <td><input type="text" name="username" placeholder="Username" class="form-control"></td>
-            </tr>
-                    
-            <tr>
-                <td>Password: </td>
-                <td><input type="password" name="password" placeholder="Password" class="form-control"></td>
-            </tr>
+            <div class="mb-3">
+                <input class="btn btn-primary" type="submit" value="Login">
+            </div>
+        </form>
 
-            <tr>
-                <td></td>
-                <td><input class="btn login_btn" type="submit" value="Login"></td>
-            </tr>
-        </table>
-    </form>
+        {% if messages %}
+            <div class="alert alert-danger">
+                <ul>
+                    {% for message in messages %}
+                        <li>{{ message }}</li>
+                    {% endfor %}
+                </ul>
+            </div>
+        {% endif %}
 
-    {% if messages %}
-        <ul>
-            {% for message in messages %}
-                <li>{{ message }}</li>
-            {% endfor %}
-        </ul>
-    {% endif %}     
-        
-    Don't have an account yet? <a href="{% url 'main:register' %}">Register Now</a>
-
+        <p class="text-center">Don't have an account yet? <a href="{% url 'main:register' %}">Register Now</a></p>
+    </div>
 </div>
-
 {% endblock content %}

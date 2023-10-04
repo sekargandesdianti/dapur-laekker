@@ -320,3 +320,107 @@ https://docs.djangoproject.com/en/4.2/
 https://developer.mozilla.org/en-US/docs/Learn/Server-side/Django/Sessions 
 
 https://pbp-fasilkom-ui.github.io/ganjil-2024/docs/tutorial-3
+---
+
+TUGAS 4 PEMROGRAMAN BERBASIS PLATFORM
+---
+Nama	: Sekar Gandes Dianti
+
+NPM	: 2206082713
+
+Kelas	: PBP D
+
+Jelaskan manfaat dari setiap element selector dan kapan waktu yang tepat untuk menggunakannya
+---
+1. Selector Elemen
+   - Manfaat:
+   - Tepat digunakan untuk mengaplikasikan gaya atau operasi pada semua elemen dari satu jenis. 
+   
+   Contoh:
+   ```
+   p {
+    color: blue;
+   }
+   ```
+2. Selector ID
+   - Manfaat:
+   -  Tepat digunakan untuk mengaplikasikan gaya atau operasi pada elemen dengan ID tertentu.
+   
+   Contoh:
+   ```
+   #header {
+    background-color: gray;
+   }
+   ```
+3. Selector Kelas
+   - Manfaat: memilih elemen berdasarkan kelas yang mereka miliki.
+   - Tepat digunakan untuk mengaplikasikan gaya atau operasi pada sekelompok elemen yang karakteristik atau tampilannya sama.
+   
+   Contoh:
+   ```
+   .highlight {
+    font-weight: bold;
+   }
+   ```
+
+Jelaskan HTML5 Tag yang kamu ketahui.
+---
+Penjelasan tentang HTML5 tag yang saya gunakan pada tugas ini adalah sebagai berikut.
+- `<div>`: menentukan bagian dalam dokumen
+- `<tbody>`: mengelompokkan elemen-elemen `<tr>`
+- `<tr>`: mewakili satu baris dalam table
+- `<th>`: mendefinisikan table header
+- `<title>`: memberikan judul
+- `<p>`: menandakan sebuah paragraf atau blok teks
+- `<h1>` s.d. `<h6>`: menentukan header 1 sampai header 6
+- `<comment>`: memberikan komentar pada dokumen HTML
+- `<br>`: membuat baris baru
+- `<form>`: menentukan formulir
+- `<a>`: mendefinisika hyperlink
+- `<label>`: menetapkan label untuk elemen form
+- `<input>`: menentukan kontrol input dalam formulir
+- `<nav>`:  menandai bagian navigasi pada dokumen HTML
+- `<ul>`: membuat list yang tidak terutur
+- `<li>`: menandai list item
+- `<span>`: menentukan bagian dalam dokumen
+
+Jelaskan perbedaan antara margin dan padding
+---
+- Margin adalah ruang di sekitar suatu elemen. Margin digunakan untuk memindahkan elemen ke atas atau ke bawah pada halaman serta ke kiri atau ke kanan. Margin tidak memiliki warna background (transparan).
+- Padding adalah ruang antara elemen dan konten terkait di dalamnya. Padding menentukan bagaimana elemen terlihat dan ditempatkan di dalam wadah. Padding dapat dipengaruhi oleh warna background.
+
+Jelaskan perbedaan antara framework CSS Tailwind dan Bootstrap. Kapan sebaiknya kita menggunakan Bootstrap daripada Tailwind, dan sebaliknya?
+---
+1. Bootstrap
+   - Menawarkan desain bawaan
+   - Developer hanya tinggal menggunakan komponen-komponen yang sudah ada dengan menambahkan kelas-kelas HTML khusus
+   - Ukuran file lebih besar karena fitur bawaan yang disediakan
+   - Memiliki sistem grid bawaan
+   - Cocok untuk proyek yang kebutuhan desainnya standar
+2. Tailwind 
+   - Tidak ada desain bawaan, tetapi memberikan kelas-kelas utilitas yang fleksibel. 
+   - Penentuan desain (gaya dan tata letak) langsung di dalam HTML
+   - Ukuran file lebih kecil dan memberikan kustomisasi yang tinggi
+   - Tidak memiliki sistem grid bawaan
+   - Cocok untuk developer yang ingin tingkat kostumisasinya tinggi dan desain yang lebih unik.
+
+Dari perbedaan tersebut, kita dapat
+- Menggunakan Bootstrap Ketika:
+   - Proyek memerlukan implementasi cepat dengan sedikit konfigurasi
+   - Tim pengembangan tidak memiliki banyak pengalaman dalam desain antarmuka.
+   - Butuh banyak komponen UI yang sudah jadi.
+- Menggunakan Tailwind Ketika:
+   - Ingin kebebasan desain yang lebih besar.
+   - Lebih memilih pendekatan "utility-first" dan ingin kontrol yang lebih detail.
+   - Proyek memerlukan performa yang optimal dengan file CSS yang lebih kecil.
+
+Referensi Tugas 5:
+Slides Web Design Using HTML5 and CSS3
+
+https://pbp-fasilkom-ui.github.io/ganjil-2024/docs/tutorial-4 
+
+https://www.digitalocean.com/community/tutorials/how-to-select-html-elements-using-id-class-and-attribute-selectors-in-css
+
+https://www.tutorialspoint.com/html5/html5_tags.htm 
+
+https://www.geeksforgeeks.org/css-padding-vs-margin/ 

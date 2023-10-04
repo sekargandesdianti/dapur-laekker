@@ -11,7 +11,6 @@ from django.core import serializers
 from main.models import Inventory
 from django.http import HttpResponseRedirect
 from main.forms import ProductForm
-from django.urls import reverse
 from django.shortcuts import render
 
 @login_required(login_url='/login')
@@ -90,3 +89,25 @@ def logout_user(request):
     response = HttpResponseRedirect(reverse('main:login'))
     response.delete_cookie('last_login')
     return response
+
+def edit_product(request, id):
+    # Get product berdasarkan ID
+    product = Inventory.objects.get(pk = id)
+
+    # Set product sebagai instance dari form
+    form = ProductForm(request.POST or None, instance=product)
+
+    if form.is_valid() and request.method == "POST":
+        # Simpan form dan kembali ke halaman awal
+        form.save()
+        return HttpResponseRedirect(reverse('main:show_main'))
+    context = {'form': form}
+    return render(request, 'edit_product.html', context)
+
+def delete_product(request, id):
+    # Get data berdasarkan ID
+    product = Inventory.objects.get(pk = id)
+    # Hapus data
+    product.delete()
+    # Kembali ke halaman awal
+    return HttpResponseRedirect(reverse('main:show_main'))

@@ -1,19 +1,22 @@
 {% extends 'base.html' %} 
 
 {% block content %}
-<h1>Add New Product</h1>
+<div class="container">
+    <h1 class="mt-4">Add New Product</h1>
 
-<form method="POST">
-    {% csrf_token %}
-    <table>
-        {{ form.as_table }}
-        <tr>
-            <td></td>
-            <td>
-                <input type="submit" value="Add Product"/>
-            </td>
-        </tr>
-    </table>
-</form>
+    <form method="POST" class="mt-4">
+        {% csrf_token %}
+    
+        <table class="table">
+            {{ form.as_table }}
+            <tr>
+                <td></td>
+                <td>
+                    <button type="submit" class="btn btn-primary">Add Product</button>
+                </td>
+            </tr>
+        </table>
+    </form>
 
+</div>
 {% endblock %}

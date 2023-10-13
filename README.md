@@ -424,3 +424,75 @@ https://www.digitalocean.com/community/tutorials/how-to-select-html-elements-usi
 https://www.tutorialspoint.com/html5/html5_tags.htm 
 
 https://www.geeksforgeeks.org/css-padding-vs-margin/ 
+
+---
+TUGAS 6 PEMROGRAMAN BERBASIS PLATFORM
+---
+
+Nama	: Sekar Gandes Dianti
+
+NPM	: 2206082713
+
+Kelas	: PBP D
+
+Jelaskan perbedaan antara asynchronous programming dengan synchronous programming.
+---
+Asynchronous programming adalah teknik pemrograman yang memungkinkan eksekusi beberapa task tanpa harus menunggu suatu task selesai dilakukan untuk melanjutkan task yang lain. 
+
+Synchronous programming adalah teknik pemrograman di mana ketika suatu task sedang dieksekusi, program harus menunggu task tersebut selesai untuk melanjutkan eksekusi task berikutnya.
+
+Ilustrasi dari asynchronous dan synchronous programming adalah sebagai berikut.
+![Alt text](image-1.png)
+Sumber gambar: https://www.google.com/url?sa=i&url=https%3A%2F%2Fwww.scaler.com%2Ftopics%2Fsynchronous-and-asynchronous-javascript%2F&psig=AOvVaw1zlMlsNEfYAug8DX0Vg-nQ&ust=1697236068930000&source=images&cd=vfe&opi=89978449&ved=0CBMQjhxqFwoTCJiA2ZnH8YEDFQAAAAAdAAAAABBW
+
+Perbedaan antara asynchronous dan synchronous programming adalah sebagai berikut. 
+![Alt text](image.png)
+
+Dalam penerapan JavaScript dan AJAX, terdapat penerapan paradigma event-driven programming. Jelaskan maksud dari paradigma tersebut dan sebutkan salah satu contoh penerapannya pada tugas ini.
+---
+Event-driven programming adalah paradigma pemrograman di mana alur programnya ditentukan oleh events seperti interaksi dari user, sensor output, atau pesan dari program lain atau threads. Pada Event-driven programming, umumnya terdapat main loop yang mendengarkan sebuah event lalu memicu fungsi callback ketika event tersebut terdeteksi.
+
+Dalam tugas ini, event-driven programming diimplementasikan dengan menambahkan tombol "Add New Product" yang memiliki event listener. Ketika tombol diklik, event listener memicu fungsi yang berisi logika untuk menampilkan modal dengan formulir untuk menambahkan item.
+
+
+Jelaskan penerapan asynchronous programming pada AJAX.
+---
+Asynchronous programming di AJAX membolehkan pembaruan halaman web tanpa membuat pengguna harus menunggu server merespons. AJAX menggunakan objek XMLHttpRequest untuk mengirim request ke server dan tanggapi responsnya secara asynchronous. Ini berarti skrip JavaScript bisa terus berjalan tanpa terhenti oleh proses komunikasi dengan server. Cara kerja asynchronous ini melibatkan penggunaan fungsi callback yang dijalankan setelah request selesai. Contohnya, fungsi `success` menangani respons yang berhasil, sementara `error` menanggapi kesalahan. Event handling juga digunakan untuk memantau perubahan status request, seperti event `onreadystatechange`, yang memungkinkan developer untuk merespon status permintaan secara dinamis. Dalam pengembangan web dengan jQuery, penggunaan fungsi `$.ajax()` memudahkan penggunaan asynchronous AJAX dengan menyediakan opsi yang dapat diatur, seperti URL, jenis request, dan fungsi callback. Ini memudahkan kita untuk membuat aplikasi web yang responsif dan efisien.
+
+Pada PBP kali ini, penerapan AJAX dilakukan dengan menggunakan Fetch API daripada library jQuery. Bandingkanlah kedua teknologi tersebut dan tuliskan pendapat kamu teknologi manakah yang lebih baik untuk digunakan.
+---
+Perbandingan antara Fetch API dan library jQuery adalah sebagai berikut.
+
+![Alt text](image-3.png)
+
+Berdasarkan perbandingan tersebut, menurut saya Fetch API lebih baik digunakan dibandingkan jQuery karena lebih ringan, terintegrasi langsung dengan JavaScript modern, dan menggunakan konsep Promise untuk menyederhanakan penanganan asynchronous. Fokus Fetch API pada HTTP request membuatnya lebih sederhana dan tidak memberikan overhead fungsi tambahan yang tidak diperlukan. Selain itu, Fetch API memiliki dukungan browser yang lebih baik karena tersedia di semua browser modern. 
+
+Jelaskan bagaimana cara kamu mengimplementasikan checklist di atas secara step-by-step (bukan hanya sekadar mengikuti tutorial).
+---
+1. Membuat fungsi `get_product_json` pada `views.py` yang mana fungsi tersebut berfungsi untuk menampilkan data produk pada HTML dengan menggunkan `fetch`
+2. Membuat fungsi `add_product_ajax` pada `views.py` yang mana fungsi tersebut berfungsi untuk menambahkan produk baru ke database dengan AJAX
+3. Mengimpor kedua fungsi tersebut ke `urls.py` dan menambahkan routing untuk kedua fungsi tersebut.
+4. Memperbarui `main.html` untuk mendukung AJAX GET dengam menambahkan blok skrip pada `main.html` dengan fungsi `refreshProducts`. Fungsi ini melakukan permintaan GET asynchronous ke URL yang ditentukan oleh `{% url 'main:get_product_json' %}`. Kemudian, hasil respons JSON diproses dan memperbarui konten HTML untuk menampilkan produk.
+5. Menambahkan kode untuk mengimplementasikan modal untuk formulir menambahkan item baru di `main.hmtl`.
+6. Menambahkan button "Add New Product by AJAX" untuk menampilkan modal dengan cara berikut ini `<button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal">Add New Product</button>`
+7. Menambahkan fungsi `addProduct` pada bagian skirp di `main.html` yang mana fungsi tersebut berfungsi untuk menambahkan data produk ke basis data secara AJAX dan menambahkan fungsi `onclick` pada button "Add New Product" untuk menjalankan fungsi `addProduct`.
+8. Menjalankan `python manage.py collectstatic` di terminal
+
+Referensi Tugas 6:
+---
+
+https://reintech.io/blog/what-is-event-driven-programming-in-javascript
+
+https://4geeks.com/lesson/event-driven-programming 
+
+https://stackoverflow.com/questions/54229132/can-i-use-fetch-api-in-jquery-datatables
+
+https://www.digitalocean.com/community/tutorials/how-to-use-the-javascript-fetch-api-to-get-data
+
+https://www.geeksforgeeks.org/how-to-use-the-javascript-fetch-api-to-get-data/
+
+https://www.geeksforgeeks.org/how-to-fetch-data-from-json-file-and-display-in-html-table-using-jquery/
+
+
+
+

@@ -7,7 +7,7 @@ NPM     : 2206082713
 Kelas   : PBP D
 
 Tautan aplikasi:
-https://dapur-laekker.adaptable.app/main/
+https://sekar-gandes-dapurlaekker.pbp.cs.ui.ac.id
 
 
 Jelaskan bagaimana cara kamu mengimplementasikan checklist di atas secara step-by-step (bukan hanya sekadar mengikuti tutorial).
